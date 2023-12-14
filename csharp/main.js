@@ -3,6 +3,10 @@
 
 import { dotnet } from './dotnet.js'
 
+// need to copy the rust pkg directory into the
+// csharp/bin/Debug/net7.0/browser-wasm/AppBundle directory manually for the poc
+import init, { greet } from "../rust/pkg/rust.js";
+
 const { setModuleImports, getAssemblyExports, getConfig } = await dotnet
     .withDiagnosticTracing(false)
     .withApplicationArgumentsFromQuery()
@@ -22,4 +26,6 @@ const text = exports.MyClass.Greeting();
 console.log(text);
 
 document.getElementById('out').innerHTML = text;
+
+await init();
 await dotnet.run();
