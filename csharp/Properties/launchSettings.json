@@ -1,0 +1,13 @@
+{
+    "profiles": {
+      "csharp": {
+        "commandName": "Project",
+        "launchBrowser": true,
+        "environmentVariables": {
+          "ASPNETCORE_ENVIRONMENT": "Development"
+        },
+        "applicationUrl": "https://localhost:7190;http://localhost:5039",
+        "inspectUri": "{wsProtocol}://{url.hostname}:{url.port}/debug?browser={browserInspectUri}"
+      }
+    }
+}
